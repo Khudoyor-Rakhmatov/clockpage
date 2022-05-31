@@ -17,14 +17,13 @@ h1{
 #worldclocks{
   margin: 50px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.8em;
 }
 
 #worldclocks > div{
   color: #ffffff;
   background-color: #800020;
-  /* box-shadow: 0 0 10px #70021d; */
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1em;
@@ -55,11 +54,11 @@ img{
 }
 
 .coordinator{
-  margin: 5px;
+  margin: 2px;
   font-size: 1.2rem;
 }
 
 .city{
-  margin: 0;
+  margin: 2px;
   font-size: 1.2rem;
 }
