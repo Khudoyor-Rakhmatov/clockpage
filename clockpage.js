@@ -22,8 +22,24 @@ function time() {
   bangkokMins.textContent = minutesBangkok;
   bangkokSecs.textContent = secondsBangkok;
 
+  // Makassar Time
+  const makassarTime = dateTime.toLocaleString('en-US', {timeZone:'Asia/Makassar', timeStyle: 'medium', hourCycle: 'h24'});
 
-// Manila Time
+  const makassarHrs = document.getElementById('makassar-hrs');
+  const makassarMins = document.getElementById('makassar-mins');
+  const makassarSecs = document.getElementById('makassar-secs');
+
+  let hoursMakassar = makassarTime.toString().substring(0, 2) % 24 || 00;
+  hoursMakassar = hoursMakassar.toString().padStart(2, "0");
+  let minutesMakassar = makassarTime.toString().substring(3, 5);
+  minutesMakassar = minutesMakassar.toString().padStart(2, "0");
+  let secondsMakassar = makassarTime.toString().substring(6, 8);
+
+  makassarHrs.textContent = hoursMakassar;
+  makassarMins.textContent = minutesMakassar;
+  makassarSecs.textContent = secondsMakassar;
+
+  // Manila Time
   const manilaTime = dateTime.toLocaleString('en-US', {timeZone:'Asia/Manila', timeStyle: 'medium', hourCycle: 'h24'});
 
   const manilaHrs = document.getElementById('manila-hrs');
